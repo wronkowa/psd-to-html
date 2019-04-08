@@ -148,7 +148,6 @@ section{
 .about{
   position: relative;
   background-color: #00b0b0;
-  
   /* padding: 30px 20px; */
 }
 .section_img_box{
@@ -171,14 +170,75 @@ section{
   flex-direction: column;
   justify-content: center;
 }
-.section_text_box>h1{
+section h1{
   font-size: 4rem;
   letter-spacing: 1px;
 }
-.section_text_box>p{
+section p{
   margin-top: 20px;
   font-size: 1.5rem;
   line-height: 150%;
+}
+
+.services{
+flex-direction: column;
+justify-content: flex-start;
+position: relative;
+background-color: #70bfff;
+z-index: -3;
+}
+.services>h1{
+  margin: 40px 0;
+}
+.services>.section_img_box{
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: .8;
+}
+.services_box{
+  height: 50%;
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.service_box{
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  /* padding: 0 20px; */
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .7);
+  position: relative;
+}
+.service_box::after{
+  content:'';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: black;
+  top: 0;
+  left: 75%;
+  opacity: .3;
+}
+.service_box h2{
+  display: block;
+  width: 75%;
+  text-align: center;
+}
+.service_box i {
+  display: block;
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  font-size: 3rem;
 }
 @media (orientation: landscape) {
   .logo{
@@ -196,5 +256,24 @@ section{
   .section_text_box{
     height: 100%;
     width: 50%;
+  }
+  .services{
+    flex-wrap: nowrap;
+    /* background-color: #70bfff; */
+  }
+  .services>.section_img_box{
+    top: 0;
+    right: 0;
+  }
+  .services>.section_img_box>img{
+    width: 80%;
+  }
+  .services h1{
+    margin:  20px 0;
+  }
+  .services_box{
+    width: 50%;
+    height: 50%;
+    left: 30%;
   }
 }
